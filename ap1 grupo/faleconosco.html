@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/TIL_favicon.ico" type="image/x-icon">
+    <title>Sistema Único de Saúde</title>
+    <style>
+        @import url(estilobase.css);
+        :root{
+          --cor01:#0064b9;
+          --cor02:#004b93;
+          --cor03:#0d365d;
+          --cor04:#112b44;
+          --cor05:#142938;
+
+}
+main{
+    background-image: url(Imagens/cronalogia.jpg);
+    background-repeat: no-repeat;
+    background-size:1200px ;
+}
+footer{
+    margin-top:310px;
+}
+        form {
+    font-family: Verdana,Tahoma,sans-serif;
+    font-size: 15px;
+    background-color:var(--cor02);
+    max-width: 500px;
+    border:1px solid black;
+    border-radius:5px;
+    margin:auto;
+}
+
+main h1 {
+    font-size:18px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: #ffffff;
+    text-shadow: 5px 5px 5px black;
+    text-align: center;
+}
+
+input, textarea {
+    width: 200px;
+    padding: 10px;
+    color: black;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+input:hover, textarea:hover, input:focus, textarea:focus {
+    border-color: #000066;
+    box-shadow: 5px 0px 9px #00000038;
+    background-color:rgb(226, 226, 226);
+    color: black;
+    font-weight: bold;
+}
+
+.enviar {
+    background-color: var(--cor01);
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    margin: 10px 20px ;
+}
+
+textarea {
+    width: 400px;
+    height: 120px;
+    line-height: 20px;
+    max-width: 400px;
+}
+
+form label {
+    margin-left: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: block;
+    padding: 5px 0px 0px 5px;
+
+}
+
+    </style>
+    <script>
+        function Enviar() {
+
+var nome = document.getElementById("nomeid");
+
+if (nome.value != "") {
+    alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso, entraremos em contato assim que possivel!');
+}
+
+}
+    </script>
+</head>
+<body>
+    
+    <header>
+        <h1>Sáude Escrita </h1>
+        <h3>Sistema Único de Saúde (SUS)</h3>
+        <nav>
+<a href="index.html">Sua Historia</a>
+<a href="cronalogia.html">Cronologia</a>
+<a href="melhorias.html">Possiveis Melhorias</a>
+        </nav>
+    </header>
+    <main>
+        <form name="meu_form">
+
+            <h1>Fale Conosco:</h1>
+
+            <label for="nome">Nome</label>
+            <input type="text" id="nomeid" placeholder="Nome Completo" required="required" name="nome" />
+            
+          
+            <label for="fone">Cel</label>
+            <input type="tel" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
+            
+            <label for="email">Email</label>
+            <input type="email" id="emailid" placeholder="email@mail.com" name="email" />
+            
+          
+            <textarea placeholder="Assunto"></textarea>
+          
+            <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+          </form>
+    </main>
+</body>
+<footer>
+    <h2>
+        site criado por Equipe TILíderes!
+    </h2>
+    <nav>
+        <a href="faleconosco.html">fale conosco!</a>
+    </nav>
+ </footer>
+</html>
